@@ -11,9 +11,19 @@ class AuthHelper
     protected $session;
 
     // construct function
-    public function __construct(Session $session)
+    // public function __construct(Session $session)
+    // {
+    //     $this->$session = $session;
+    // }
+    public function boot()
     {
-        $this->session = $session;
+        $this->session = app(Session::class);
+    }
+
+    public function test()
+    {
+        $user = $this->session->get("user");
+        dd($user);
     }
 
     // login function
