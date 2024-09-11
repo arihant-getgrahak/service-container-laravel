@@ -20,12 +20,6 @@ class AuthHelper
         $this->session = $session;
     }
 
-    public function test()
-    {
-        $user = $this->session->get("user");
-        dd($user);
-    }
-
     // login function
     public function login(array $data)
     {

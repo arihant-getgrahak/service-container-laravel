@@ -1,12 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use App\Helper\Fascade\AuthFascade;
+use Auth;
 
 class DashboardController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view("dashboard");
+    }
+    public function logout()
+    {
+        AuthFascade::logout();
+        return redirect("/login");
     }
 }

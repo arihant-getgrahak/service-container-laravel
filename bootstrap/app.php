@@ -11,7 +11,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias(
+            [
+                "custom_auth.users" => \App\Http\Middleware\AuthMiddleware::class
+            ]
+        );
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
