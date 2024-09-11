@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Helper\Fascade\AuthFascade;
 
 class TestController extends Controller

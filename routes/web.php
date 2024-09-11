@@ -13,6 +13,10 @@ Route::get('/', function () {
 Route::get("/test", [TestController::class, "index"]);
 Route::get("/test", [TestController::class, "test"]);
 
-Route::get("/login",[LoginAuthController::class,"index"]);
-Route::get("/register",[RegisterAuthController::class,"index"]);
-Route::get("/dashboard",[DashboardController::class,"index"]);
+Route::get("/login", [LoginAuthController::class, "index"]);
+Route::get("/register", [RegisterAuthController::class, "index"]);
+Route::get("/dashboard", [DashboardController::class, "index"]);
+
+// Post
+
+Route::post("/login", [LoginAuthController::class, "login"]);

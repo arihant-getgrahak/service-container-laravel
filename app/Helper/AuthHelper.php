@@ -10,11 +10,6 @@ class AuthHelper
 {
     protected $session;
 
-    // construct function
-    // public function __construct(Session $session)
-    // {
-    //     $this->$session = $session;
-    // }
     public function boot()
     {
         $this->session = app(Session::class);
@@ -33,7 +28,7 @@ class AuthHelper
         if (!$checkUserExist) {
             return [
                 'success' => false,
-                'message' => 'Email or Password not valid'
+                'message' => 'Entered Email is not registered'
             ];
         }
         if (!Hash::check($data['password'], $checkUserExist->password)) {
