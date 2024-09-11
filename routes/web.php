@@ -20,3 +20,4 @@ Route::get("/dashboard", [DashboardController::class, "index"]);
 // Post
 
 Route::post("/login", [LoginAuthController::class, "login"]);
+Route::post("/register", [RegisterAuthController::class, "register"]);

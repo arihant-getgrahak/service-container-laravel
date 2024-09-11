@@ -9,7 +9,7 @@
 <body>
 <div class="flex flex-col items-center justify-center">
         <h1 class="text-3xl font-bold">Laravel Auth::Register</h1>
-        <form action="{{ url('/auth/register') }}" method="post" class="space-y-4 border border-black w-1/3 p-4 mt-4">
+        <form action="{{ url('/register') }}" method="post" class="space-y-4 border border-black w-1/3 p-4 mt-4">
             @csrf
             <div class="flex flex-col gap-2">
                 <label for="name">Name</label>
@@ -55,7 +55,7 @@
             </div>
             <button type="submit" class="w-full border border-black p-1 rounded-md bg-blue-500 text-white">Submit</button>
         </form>
-        <p><a class="text-blue-500 underline" href="{{ url('auth/login') }}">Login</a></p>
+        <p><a class="text-blue-500 underline" href="{{ url('/login') }}">Login</a></p>
     </div>
 
     <script>
